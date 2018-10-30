@@ -26,10 +26,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LrpcServerImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LrpcServerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lrpc/rpc/LrpcServerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-261">
+            <state relative-caret-position="552">
               <caret line="24" column="35" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -133,11 +133,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RpcService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RpcService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lrpc/rpc/config/annotation/RpcService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="184">
+              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -225,6 +225,9 @@
       <find>rpcEncode</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
@@ -249,7 +252,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrpc/rpc/utils/SerializationUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrpc/rpc/config/handler/RpcEncode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lrpc/rpc/config/annotation/RpcService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrpc/rpc/vo/RpcRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrpc/service/impl/HelloServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mock/controller/MockController.java" />
@@ -265,6 +267,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lrpc/rpc/LrpcHandlerAutoConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrpc/rpc/config/handler/RpcHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lrpc/rpc/config/annotation/EnableLrpcConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lrpc/rpc/config/annotation/RpcService.java" />
       </list>
     </option>
   </component>
@@ -305,6 +308,7 @@
     <option name="width" value="1155" />
     <option name="height" value="1032" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <autoscrollFromSource ProjectPane="true" />
@@ -526,12 +530,12 @@
       <workItem from="1540897132752" duration="16000" />
       <workItem from="1540897155960" duration="1000" />
       <workItem from="1540897161102" duration="68000" />
-      <workItem from="1540897261642" duration="2945000" />
+      <workItem from="1540897261642" duration="3135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36919000" />
+    <option name="totallyTimeSpent" value="37109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -554,7 +558,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Run" order="10" sideWeight="0.4987874" weight="0.32902032" />
-      <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Spring" order="5" />
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.6524954" />
       <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49537894" visible="true" weight="0.3678254" />
@@ -870,13 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrpc/rpc/config/annotation/RpcService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE-sources.jar!/org/springframework/stereotype/Component.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9">
@@ -990,6 +987,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrpc/rpc/LrpcServerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lrpc/rpc/config/annotation/EnableLrpcConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -997,13 +1004,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrpc/rpc/LrpcServerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lrpc/rpc/config/annotation/RpcService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
         </state>
       </provider>
     </entry>
