@@ -35,6 +35,7 @@ public class LrpcServerImpl implements LrpcServer, ApplicationListener<Applicati
                     .channel(NioServerSocketChannel.class)
                     .childHandler(lrpcChannelInit)
                     .option(ChannelOption.SO_BACKLOG, 128)
+                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 10000)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture future = bootstrap.bind(new InetSocketAddress(lrpcChannelInit.getPort())).sync();
             future.channel().closeFuture().sync();

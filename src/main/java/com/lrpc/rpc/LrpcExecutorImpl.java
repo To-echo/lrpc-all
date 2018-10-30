@@ -19,6 +19,7 @@ import java.net.InetSocketAddress;
 public class LrpcExecutorImpl implements LrpcExecutor {
     private String host;
     private Integer port;
+
     public LrpcExecutorImpl(String host, Integer port) {
         this.host = host;
         this.port = port;
@@ -52,6 +53,7 @@ public class LrpcExecutorImpl implements LrpcExecutor {
             b.group(group)
                     .channel(NioSocketChannel.class)
                     .handler(lrpcClientChannelInit)
+                    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 10000)
                     .option(ChannelOption.SO_KEEPALIVE, true);
             future = b.connect(new InetSocketAddress(host, port)).sync();
             //TODO 连接好了直接发送消息,同步则阻塞等待通知

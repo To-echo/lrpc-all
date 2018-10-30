@@ -37,11 +37,11 @@ public class RpcHandler extends SimpleChannelInboundHandler<RpcRequest> {
         RpcResponse rpcResponse = new RpcResponse();
         Object obj = rpcBeans.get(msg.getClassName());
         //TODO 暂时这样吧
-        if (Objects.isNull(obj)){
+        if (Objects.isNull(obj)) {
             System.out.println("未找到service");
             rpcResponse.setResult(null);
             rpcResponse.setCode(404);
-            logger.warning("请求的service未找到,msg:"+msg.toString());
+            logger.warning("请求的service未找到,msg:" + msg.toString());
             return rpcResponse;
         }
         rpcResponse.setId(msg.getId());
@@ -56,5 +56,11 @@ public class RpcHandler extends SimpleChannelInboundHandler<RpcRequest> {
         rpcResponse.setResult(result);
         rpcResponse.setCode(200);
         return rpcResponse;
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        ctx.close();
+        logger.warning(cause.toString());
     }
 }
