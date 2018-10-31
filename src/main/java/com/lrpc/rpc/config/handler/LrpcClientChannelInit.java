@@ -11,10 +11,10 @@ import io.netty.handler.logging.LoggingHandler;
  * @author tianp
  **/
 public class LrpcClientChannelInit extends ChannelInitializer {
-    private LrpClientHandler lrpClientHandler;
+    private LrpcClientHandler lrpcClientHandler;
 
     public LrpcClientChannelInit() {
-        lrpClientHandler = new LrpClientHandler();
+        lrpcClientHandler = new LrpcClientHandler();
     }
 
     @Override
@@ -23,16 +23,14 @@ public class LrpcClientChannelInit extends ChannelInitializer {
         ch.pipeline().addLast(new RpcEncode(RpcRequest.class))
                 .addLast(new RpcDecode(RpcResponse.class))
                 .addLast(new LoggingHandler(LogLevel.INFO))
-                .addLast(lrpClientHandler);
-    }
-    public synchronized void initHandler(LrpClientHandler lrpClientHandler){
-        this.lrpClientHandler = lrpClientHandler;
-    }
-    public LrpClientHandler getLrpClientHandler() {
-        return lrpClientHandler;
+                .addLast(lrpcClientHandler);
     }
 
-    public void setLrpClientHandler(LrpClientHandler lrpClientHandler) {
-        this.lrpClientHandler = lrpClientHandler;
+    public LrpcClientHandler getLrpClientHandler() {
+        return lrpcClientHandler;
+    }
+
+    public void setLrpClientHandler(LrpcClientHandler lrpClientHandler) {
+        this.lrpcClientHandler = lrpClientHandler;
     }
 }

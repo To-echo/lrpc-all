@@ -7,7 +7,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 /**
  * @author tianp
  **/
-public class LrpClientHandler extends SimpleChannelInboundHandler<RpcResponse> {
+public class LrpcClientHandler extends SimpleChannelInboundHandler<RpcResponse> {
     private final Object lock = new Object();
     private volatile RpcResponse rpcResponse = null;
 

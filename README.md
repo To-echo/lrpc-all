@@ -60,4 +60,27 @@ public class RpcConfiguration {
 
 ```
 
+7. 调用，RpcRequest请求类中的className为@RpcService中的value，methodName为@RpcService标识的类中的方法名
+
+
+```
+@Autowired
+    @Qualifier(value = "helloRpcExecutor")
+    private LrpcExecutor helloRpcExecutor;
+
+    @GetMapping("/say")
+    public String invoke(String msg) {
+        RpcRequest rpcRequest = new RpcRequest();
+        rpcRequest.setClassName("HelloService");
+        rpcRequest.setMethodName("say");
+        rpcRequest.setId(111L);
+        HashMap<Class<?>, Object> arguments = new HashMap<>(8);
+        arguments.put(String.class, "good");
+        rpcRequest.setArguments(arguments);
+        RpcResponse execute = helloRpcExecutor.execute(rpcRequest);
+        System.out.println(execute.toString());
+        return execute.toString();
+    }
+	.....
+```
 最后，以上为个人练手demo，未来有时间会把未完善的地方慢慢完善，最终目标是做成像dobble那样的pj，如有好的意见或疑惑欢迎各位大佬指点（morty630@foxmail.com）

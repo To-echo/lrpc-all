@@ -24,7 +24,6 @@ import java.util.Set;
  **/
 @Configurable
 @Component
-@EnableAutoConfiguration
 public class LrpcHandlerAutoConfiguration implements ApplicationContextAware {
     private ApplicationContext context;
     @Value("${lrpc.server}")
@@ -50,11 +49,6 @@ public class LrpcHandlerAutoConfiguration implements ApplicationContextAware {
     }
 
     //-----------------------------server
-//    @Bean("serverRequest")
-//    public RpcDecode serverRequest() {
-//        return new RpcDecode(RpcRequest.class);
-//    }
-
     @Bean("serverResponse")
     public RpcEncode serverResponse() {
         return new RpcEncode(RpcResponse.class);
@@ -65,17 +59,9 @@ public class LrpcHandlerAutoConfiguration implements ApplicationContextAware {
     public LrpcChannelInit lrpcChannelInit(RpcHandler rpcHandler,
                                            @Qualifier("serverResponse") RpcEncode rpcEncode) {
         //响应加密
-        return new LrpcChannelInit( rpcEncode, rpcHandler, Integer.parseInt(port));
+        return new LrpcChannelInit(rpcEncode, rpcHandler, Integer.parseInt(port));
     }
-    //-------------------------client
-//    @Bean("clientResponse")
-//    public RpcEncode clientResponse() {
-//        return new RpcEncode(RpcRequest.class);
-//    }
-//    @Bean
-//    public LrpcClientChannelInit lrpcClientChannelInit(@Qualifier("clientResponse") RpcEncode rpcEncode){
-//        return new LrpcClientChannelInit(rpcEncode);
-//    }
+
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.context = applicationContext;
