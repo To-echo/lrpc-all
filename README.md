@@ -83,4 +83,4 @@ public class RpcConfiguration {
     }
 	.....
 ```
-最后，以上为个人练手demo，未来有时间会把未完善的地方慢慢完善，最终目标是做成像dobble那样的pj，如有好的意见或疑惑欢迎各位大佬指点（morty630@foxmail.com）
+最后，以上为个人练手demo，未来有时间会把未完善的地方慢慢完善，最终目标是做成像Dubbo那样的pj，如有好的意见或疑惑欢迎各位大佬指点（morty630@foxmail.com）
